@@ -1,0 +1,147 @@
+.menu_section {
+    position: sticky !important;
+    top: 0;
+    padding: 10px 0
+}
+
+.header_contact {
+    height: 350px;
+    background: linear-gradient( rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7)100%),url(/images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+    .header_contact h1 {
+        text-align: center;
+        font-size: 45px;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+
+
+.publication_item .publication_img {
+    height: 350px;
+    width: 100%
+}
+
+.publication_item .item1 {
+    background: url("/images/publications/publication1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.publication_content .publication_item span {
+    font-style: italic;
+    color: gray;
+}
+
+.publication_item .publication_img span {
+    color: #fff;
+    font-style: unset;
+}
+
+.publication_item span {
+    color: #444;
+}
+
+.publication_item + hr {
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+/*#region sidebar*/
+.sidebar {
+    padding:0 0 0 40px;
+}
+.sidebar .input_wrapper {
+    position: relative
+}
+
+    .sidebar .input_wrapper input {
+        width: 100%;
+        padding: 6px 10px 6px 10px;
+    }
+
+    .sidebar .input_wrapper svg {
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        width: 20px;
+        height: 20px;
+    }
+
+.sidebar h2 {
+    margin-bottom: 25px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+.sidebar .sidebar_news_item p {
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.sidebar .sidebar_news_item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.sidebar span {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.sidebar hr {
+    margin: 1.5rem 0;
+}
+
+.sidebar .sidebar_news_content {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+    .sidebar .sidebar_news_content span {
+        font-size: 14px;
+        font-style: italic;
+        color: gray;
+        
+    }
+
+.sidebar .categories {
+    margin-bottom: 2.5rem
+}
+
+    .sidebar .categories li {
+        margin-bottom: 10px;
+    }
+
+        .sidebar .categories li > a {
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar .categories li a span {
+            color: #444;
+            padding-left: 15px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 15px;
+        }
+
+        .sidebar .categories li a:hover span {
+            color: var(--green);
+        }
+/*#endregion*/
