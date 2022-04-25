@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>property Detail</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section id="wrapper">
+        <section id="page-content-wrapper">
+            <div class="top_menu">
+
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-11 col-xl-3 col-10 col-sm-11">
+                            <h1 class="logo">
+                                <a href="index.html">
+                                    Office <span> Space</span>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="col-xl-9 menu">
+                            <ul>
+                                <li><a href="http://localhost:3004/">Home</a></li>
+                                <li><a class="active" href="#" onclick="getData()">Property List</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="mt-5">
+            <div class="container">
+
+                <div class="row w-100 m-auto h-100">
+                    <div class="col-12 col-md-6">
+                        <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item item_1 active">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <img src="images/property/property1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item_2">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <img src="images/property/property1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item_3">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <img src="images/property/property1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-5">
+                        <div class="property_deatil">
+                            <p class="purple" id="PropertyType">Meeting Room</p>
+                            <h1 id="PropertyName">
+                                Banker Hall
+                            </h1>
+                            <h2>
+                                Specifications
+                            </h2>
+                            <ul>
+                                <li>
+                                    <p>Rent Price: <span class="property_price d-inline-block" id="PropertyPrice"> $1000</span></p>
+                                </li>
+                                <li>
+                                    <p>Avaibility Date: <span class="bold" id="PropertyAvailableDate">Juanary</span></p>
+                                </li>
+
+                                <li>
+                                    <p>Term of lease: <span class="bold" id="PropertyTerm">45 days</span></p>
+                                </li>
+                                <li>
+                                    <p>Address: <span class="bold" id="PropertyAddress">South West 421 7 Avenue Southeast 30th Floor, Calgary, AB, T2P 4K9, CAN</span></p>
+                                </li>
+                                <li>
+                                    <p>Neighbourhood: <span class="bold" id="PropertyNeighbourhood">Bownewss</span></p>
+                                </li>
+                                <li>
+                                    <p>Number of seat: <span class="bold" id="PropertySeat">4</span></p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Square Feet: <span class="bold" id="PropertyFeet">400</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <p>
+                                            Smoking
+                                            <span id="smoking"></span>
+                                        </p>
+                                        <p>
+                                            Public Transportation
+                                            <span id="Transportation"></span>
+                                        </p>
+                                        <p>
+                                            Parking
+                                            <span id="Parking"></span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        owner Contact: <input type="hidden" class="bold" id="OwnerContact">
+                                        <span class="bold" id="OwnerPhone">400</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="footer_section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 col-md-5">
+                        <div class="footer_about_us">
+                            <h1 class="logo">
+                                <a href="index.html">
+                                    Office <span> Space</span>
+                                </a>
+                            </h1>
+                            <p>
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra.lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <div class="footer_quick_link">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>
+                                    <a href="why-talent-hut.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="our-process.html">
+                                        Register
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="get-hired.html">
+                                        Log in
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-4">
+                        <div class="footer_contact">
+                            <h3>Contact Info</h3>
+                            <div class="footer_contact_item mb-3">
+                                <div class="footer_latest_update_content">
+                                    <b><script>{{ name }}</script></b>
+                                    <p>Sample Adress,Sample Adress,Sample.</p>
+                                </div>
+                            </div>
+                            <div class="footer_contact_item mb-3">
+                                <div class="footer_latest_update_content">
+                                    <b>Email Us</b>
+                                    <p>sample@sample.com</p>
+                                </div>
+                            </div>
+                            <div class="footer_contact_item">
+                                <div class="footer_latest_update_content">
+                                    <b>Call Us</b>
+                                    <p>+1 (999) 999 9999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 col-md-6 text-right">
+                            <p class="w-100">copyright@ ver. 1.0</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gotop" id="gotop">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+        </div>
+        </div>
+        <script src="script/jquery-3.6.0.min.js"></script>
+        <script src="script/bootstrap.min.js"></script>
+        <script src="script/script.js"></script>
+
+
+        <script type="text/javascript">
+            var green = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#157347" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /></svg>';
+            var red = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#dc3545" class="bi bi-x-lg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" /><path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" /></svg>'
+
+            let url = "http://localhost:3004/Mahya" + window.location.pathname;
+            fetch(url).then(response => response.json())
+                .then((result) => {
+                    //    console.log('success:', result)
+                    document.getElementById('PropertyName').innerHTML = result.Name;
+                    document.getElementById('PropertyType').innerHTML = result.Type;
+                    document.getElementById('PropertyPrice').innerHTML = '$' + result.Price;
+                    document.getElementById('PropertyAvailableDate').innerHTML = result.AvaibilityDate;
+                    document.getElementById('PropertyTerm').innerHTML = result.TermLease;
+                    document.getElementById('PropertyAddress').innerHTML = result.Address;
+                    document.getElementById('PropertyNeighbourhood').innerHTML = result.Neighbourhood;
+                    document.getElementById('PropertySeat').innerHTML = result.Seat;
+                    document.getElementById('PropertyFeet').innerHTML = result.SquareFeet;
+                    document.getElementById('OwnerContact').value = result.UserId;
+                    document.getElementById('smoking').innerHTML = result.Smoking ? green : red;
+                    document.getElementById('Parking').innerHTML = result.Parking ? green : red;
+                    document.getElementById('Transportation').innerHTML = result.PublicTransport ? green : red;
+                    console.log(document.getElementById('OwnerContact').value)
+                })
+                .catch(error => console.log('error:', error));
+
+            fetch("UserFile.json")
+                .then(response => response.json())
+                .then((result) => {
+                    console.log('success:', result)
+
+                    for (var i = 0; i < result.user.length; i++) {
+                        if (result.user[i].UserId == document.getElementById('OwnerContact').value) {
+                            // alert(result.user[i].Phone);
+                            document.getElementById('OwnerPhone').innerHTML = result.user[i].Phone;
+                            break;
+                        }
+                    }
+                })
+                .catch(error => console.log('error:', error));
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Add Property</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+
+
+        <section id="page-content-wrapper">
+            <div class="top_menu">
+
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-11 col-xl-3 col-10 col-sm-11">
+                            <h1 class="logo">
+                                <a href="index.html">
+                                    Office <span> Space</span>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="hamburger_menu col-lg-1 col-2 col-sm-1">
+                            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                                <span class="hamb-top"></span>
+                                <span class="hamb-middle"></span>
+                                <span class="hamb-bottom"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-xl-9 menu">
+                            <ul>
+                                <li><a href="http://localhost:3004/">Home</a></li>
+                                <li><a href="#" id="PropertyList">Property List</a></li>
+                                <li><a href="#" class="active" onclick="AddPropertyById()">Add Property</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+
+            <div class="row my-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="innerpage_title">Add Property:</h1>
+
+
+                        <form action="/addproperty" method="post">
+                            <input type="hidden" value="" name="UserId" id="UserId" />
+
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Name :
+                                </span>
+                                <span class="col-md-9">
+                                <input type="text" value="" name="name" class="w-50 default_input" />
+                            </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2"> Type of Place :</span>
+
+                                <div class="dropdown col-md-4">
+                                    <select name="PropertyType" class="default_input">
+                                    <option></option>
+                                    <option value="MeetingRoom">Meeting Room</option>
+                                    <option value="PrivateOfficeRoom">Private Office Room</option>
+                                    <option value="DeskinOpenArea">Desk in Open Area</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mb-3">
+                                <label class="col-md-2">Avaibility Date :</label>
+
+                                <div class="col-md-10">
+                                    <div class="radio_container">
+                                        <input type="radio" id="January" name="AvaibilityDate" value="January">
+                                        <label for="January">January</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="February" name="AvaibilityDate" value="February">
+                                        <label for="February">February</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="March" name="AvaibilityDate" value="March">
+                                        <label for="March">March</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="April" name="AvaibilityDate" value="April">
+                                        <label for="April">April</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="May" name="AvaibilityDate" value="May">
+                                        <label for="May">May</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="June" name="AvaibilityDate" value="June">
+                                        <label for="June">June</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="July" name="AvaibilityDate" value="July">
+                                        <label for="July">July</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="August" name="AvaibilityDate" value="August">
+                                        <label for="August">August</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="September" name="AvaibilityDate" value="September">
+                                        <label for="September">September</label>
+                                    </div>
+
+                                    <div class="radio_container">
+                                        <input type="radio" id="October" name="AvaibilityDate" value="October">
+                                        <label for="October">October</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="November" name="AvaibilityDate" value="November">
+                                        <label for="November">November</label>
+                                    </div>
+                                    <div class="radio_container">
+                                        <input type="radio" id="December" name="AvaibilityDate" value="December">
+                                        <label for="December">December</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Price:
+                                </span>
+                                <div class="col-md-9">
+                                    <input type="number" value="500" Name="Price" class="w-50 default_input" />
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Features:
+                            </span>
+                                <span class="col-md-9">
+                                <label class="checkbox-container">
+                                    Smoking
+                                    <input type="checkbox" checked="checked" name="Smoking" value="Smoking">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">
+                                 Reachable by public transport
+                            <input type="checkbox" checked="checked" name="PublicTransport" value="PublicTransport">
+                            <span class="checkmark"></span>
+                            </label>
+                                <label class="checkbox-container">
+                                    Parking
+                                    <input type="checkbox" checked="checked" name="Parking" value="Parking">
+                                    <span class="checkmark"></span>
+                                </label>
+                                </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Term of Lease:
+                            </span>
+                                <span class="col-md-9 avaibiliy-content">
+                                <div class="radio_container">
+                                    <input type="radio" id="Day" name="TermLease" value="Day">
+                                    <label for="Day">Day</label>
+                                </div>
+                                <div class="radio_container">
+                                    <input type="radio" id="Week" name="TermLease" value="Week">
+                                    <label for="Week">Week</label>
+                                </div>
+                                <div class="radio_container">
+                                    <input type="radio" id="Month" name="TermLease" value="Month">
+                                    <label for="Month">Month</label>
+                                </div>
+                            </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Address:
+                            </span>
+                                <span class="col-md-9">
+                                <input type="text" value="" name="Address" class="w-50 default_input" />
+
+                            </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Neighbourhood:
+                            </span>
+                                <span class="col-md-9">
+                                <input type="text" value="" name="Neighbourhood" class="w-50 default_input" />
+
+                            </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                Number of seat:
+                            </span>
+                                <span class="col-md-9">
+                                <input type="number" value="" name="SquareFeet" class="w-50 default_input" />
+
+                            </span>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <span class="col-md-2">
+                                square feet:
+                            </span>
+                                <span class="col-md-9">
+                                <input type="number" value="" name="square" class="w-50 default_input" />
+
+                            </span>
+                            </div>
+                            <div class="row py-4">
+                                <div class="col-md-12">
+                                    <input type="submit" class="property_btn w-15" id="Addpropertybutton" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/script.js"></script>
+
+    <script>
+        function getOwnerId() {
+            const params = window.location.search;
+            let useridSplit = params.split('=')
+            let userid = useridSplit[1];
+            $("#UserId").val(userid);
+            // alert("the owner Id is " + userid)
+        }
+        getOwnerId()
+
+        function AddPropertyById() {
+            const params = window.location.search;
+            let useridSplit = params.split('=')
+            let userid = useridSplit[1];
+
+            location.href = 'http://localhost:3004/AddProperty?id=' + userid + '';
+
+        }
+        $(document).ready(function() {
+            const params = window.location.search;
+            let useridSplit = params.split('=')
+            let userid = useridSplit[1];
+            $("#PropertyList").click(function() {
+                window.location.href = "http://localhost:3004/ownerlist?id=" + userid;
+            })
+
+
+            var SeatInput = $('input[name="name"]');
+            var SquarefeetInput = $('input[name="square"]');
+            var NeighbourInput = $('input[name="Neighbourhood"]');
+            var AddressInput = $('input[name="Address"]');
+            var PriceInput = $('input[name="Price"]');
+
+            var PropertyTypeSelect = $('#PropertyType');
+
+            $('#Addpropertybutton').click(function(e) {
+                if ($(SeatInput).val() == '' || $(SquarefeetInput).val() == '' ||
+                    $(NeighbourInput).val() == '' || $(AddressInput).val() == '' ||
+                    $(PriceInput).val() == '' || $(PropertyTypeSelect).val() == ''
+                ) {
+                    alert("Plaese Enter all inputs")
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                }
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

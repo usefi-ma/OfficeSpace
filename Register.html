@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Register</title>
@@ -11,110 +12,167 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
-<div id="wrapper">
+    <div id="wrapper">
+        <section id="page-content-wrapper">
+            <div class="top_menu">
 
-    <div class="overlay is-closed" data-toggle="offcanvas"></div>
-    <!-- Sidebar -->
-    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-        <ul class="nav sidebar-nav">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Speakers">Speakers</a></li>
-            <li><a href="#Agenda">Agenda</a></li>
-            <li><a href="#list">list</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </nav>
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-11 col-xl-3 col-10 col-sm-11">
+                            <h1 class="logo">
+                                <a href="index.html">
+                                    Office <span> Space</span>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="hamburger_menu col-lg-1 col-2 col-sm-1">
+                            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                                <span class="hamb-top"></span>
+                                <span class="hamb-middle"></span>
+                                <span class="hamb-bottom"></span>
+                            </button>
+                        </div>
 
-
-    <section class="registration">
-        <div class="container h-custom">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-xl-6 col-md-6">
-                    <img src="images/registration/signup-image.svg" />
+                        <div class="col-xl-9 menu">
+                            <ul>
+                                <li><a href="#" onclick='location.href="http://localhost:3004/"'>Home</a></li>
+                                <li><a href="#" onclick='location.href="http://localhost:3004/signin"'>Sign in</a></li>
+                                <li><a href="#" class="active" onclick='location.href="http://localhost:3004/register"'>Sign up</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 px-3 ">
-                    <h2 class="my-3">Sign up</h2>
-                    <form class="mt-2">
-                        <div class="d-flex justify-content-start flex-nowrap mt-4 mb-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
+            </div>
+        </section>
+
+        <section class="registration mt-5">
+            <div class="container h-custom">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-xl-6 col-md-6">
+                        <img src="images/registration/signup-image.svg" />
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6 px-3 ">
+                        <h2 class="my-3">Sign up</h2>
+                        <form class="mt-2" action="/register" method="post">
+                            <div class="d-flex justify-content-start flex-nowrap mt-4 mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="UserRole" id="userRole1" value="coworker" checked>
+                                    <label class="form-check-label" for="userRole1">
                                     Coworker
                                 </label>
-                            </div>
-                            <div class="form-check ms-4">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
+                                </div>
+                                <div class="form-check ms-5">
+                                    <input class="form-check-input" type="radio" name="UserRole" id="userRole2" value="owner">
+                                    <label class="form-check-label" for="userRole2">
                                    Owner
                                 </label>
-                            </div>
-                           
-                        </div>
-                        <div class="row">
-                            <div class="form-outline mb-2 col-6">
-                                <label class="form-label" for="form3Example3">First name</label>
-                                <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="Enter your name" />
-                            </div>
-                            <div class="form-outline mb-2 col-6">
-                                <label class="form-label" for="form3Example3">Last name</label>
-                                <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="Enter your name" />
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-outline mb-2 col-6">
-                                <label class="form-label" for="form3Example3">Phone</label>
-                                <input type="number" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="Enter your phone" />
-                            </div>
-                            <div class="form-outline mb-2 col-6">
-                                <label class="form-label" for="form3Example3">Email address</label>
-                                <input type="email" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="Enter a valid email address" />
+                                </div>
 
                             </div>
-                        </div>
-                        <div class="form-outline mb-2">
-                            <label class="form-label" for="form3Example3">Username</label>
-                            <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                   placeholder="Enter your username" />
-                        </div>
-                        <div class="row">
-                            <div class="form-outline mb-4 col-6">
-                                <label class="form-label" for="form3Example3">Password</label>
-                                <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="Enter your password" />
-                            </div>
-                            <div class="form-outline mb-4 col-6">
-                                <label class="form-label" for="form3Example3">Reapeat Password</label>
-                                <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                       placeholder="repeat your password" />
-                            </div>
-                        </div>
+                            <div class="row">
+                                <div class="form-outline mb-3 col-6">
 
-                        <div class="text-center text-lg-center mt-4 pt-2">
-                            <button type="button" class="btn btn-primary btn-lg">
-                                register
+                                    <label class="form-label">First name</label>
+                                    <input type="text" name="FirstName" class="form-control form-control-lg" placeholder="Enter your name" />
+                                </div>
+                                <div class="form-outline mb-3 col-6">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" name="LastName" class="form-control form-control-lg" placeholder="Enter your name" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-outline mb-3 col-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="phone" name="Phone" class="form-control form-control-lg" placeholder="Enter your phone" />
+                                </div>
+                                <div class="form-outline mb-3 col-6">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" name="Email" class="form-control form-control-lg" placeholder="Enter a valid email address" />
+
+                                </div>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <label class="form-label">Username</label>
+                                <input type="text" name="Username" class="form-control form-control-lg" placeholder="Enter your username" />
+                            </div>
+                            <div class="row">
+                                <div class="form-outline mb-4 col-6">
+                                    <label class="form-label">Password</label>
+                                    <input type="Password" name="Password" class="form-control form-control-lg" placeholder="Enter your password" />
+                                </div>
+                                <div class="form-outline mb-4 col-6">
+                                    <label class="form-label">Reapeat Password</label>
+                                    <input type="Password" name="RepetedPassword" class="form-control form-control-lg" placeholder="repeat your password" />
+                                </div>
+                            </div>
+
+                            <div class="text-center text-lg-center my-4 py-2">
+                                <button type="submit" class="btn btn-primary btn-lg registerBtn">
+                                Register
                             </button>
-                            <p class="small mt-2 pt-1 mb-0 text_muted">
-                                Have already an account?  <a href="login.html" class="link-danger fw-bold text_muted">Login here</a>
-                            </p>
-                        </div>
 
-                    </form>
+                            </div>
+
+                        </form>
+                        <p class="small mt-2 pt-1 mb-0 text_muted">
+                            Have already an account? <a href="#" onclick="location.href='http://localhost:3004/signin'" class="link-danger fw-bold text_muted">Login here</a>
+                        </p>
+                    </div>
+
                 </div>
-              
             </div>
-        </div>
-        
-    </section>
-    
+
+        </section>
+
     </div>
+    <script src="script/jquery-3.6.0.min.js"></script>
+
+    <script>
+        var FirstName = $("input[name='FirstName']");
+        var LastName = $("input[name='LastName']");
+        var Phone = $("input[name='Phone']");
+        var Email = $("input[name='Email']");
+        var Username = $("input[name='Username']");
+        var Password = $("input[name='Password']");
+        var RepetedPassword = $("input[name='RepetedPassword']");
+
+
+        $('.registerBtn').click(function(e) {
+            if ($(FirstName).val() == '' || $(LastName).val() == '' || $(Phone).val() == '' ||
+                $(Email).val() == '' || $(Username).val() == '' || $(Password).val() == '' ||
+                $(RepetedPassword).val() == '') {
+                alert("Plaese Enter all inputs")
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+            }
+
+        });
+
+
+        //for alerting this is the best way
+        // function ValidateInputs() {
+        //     let url = "http://localhost:3004/register";
+        //     fetch(url)
+        //         .then(response => response.json())
+        //         .then((result) => {
+        //             if ($(FirstName).val() == '' || $(LastName).val() == '' || $(Phone).val() == '' ||
+        //                 $(Email).val() == '' || $(Username).val() == '' || $(Password).val() == '' ||
+        //                 $(RepetedPassword).val() == '') {
+        //                 alert('successfully update:', result.msg)
+        //             }
+        //         })
+
+        //     .catch(error => console.log('error:', error));
+        // }
+    </script>
+
 </body>
+
 </html>

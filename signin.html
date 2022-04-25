@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sign in</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <section id="page-content-wrapper">
+            <div class="top_menu">
+
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-11 col-xl-3 col-10 col-sm-11">
+                            <h1 class="logo">
+                                <a href="index.html">
+                                    Office <span> Space</span>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="hamburger_menu col-lg-1 col-2 col-sm-1">
+                            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                                <span class="hamb-top"></span>
+                                <span class="hamb-middle"></span>
+                                <span class="hamb-bottom"></span>
+                            </button>
+                        </div>
+
+
+                        <div class="col-xl-9 menu">
+                            <ul>
+                                <li><a href="http://localhost:3004/">Home</a></li>
+                                <li><a href="#" class="active" onclick='location.href="http://localhost:3004/signin"'>Sign in</a></li>
+                                <li><a href="#" onclick='location.href="http://localhost:3004/register"'>Sign up</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration d-flex align-items-center mt-0 section_height">
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+
+                        <form action="/signin" method="post">
+                            <h2 class="my-3">Sign in</h2>
+                            <!-- Email input -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" name="Email" class="form-control form-control-lg" placeholder="Enter email address" />
+                            </div>
+                            <!-- Password input -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" name="Password" class="form-control form-control-lg" placeholder="Enter password" />
+                            </div>
+
+                            <div class="text-center text-lg-start mt-4 pt-2">
+                                <button type="submit" class="btn btn-primary btn-lg" id="signinbutton" style="padding-left: 2.5rem; padding-right: 2.5rem; ">
+                                  Sign in
+                                </button>
+                                <!-- onclick="validateInput()onclick="getErrorMessage()" " -->
+                        </form>
+                        <p class="small mt-2 pt-1 mb-0 text-muted ">
+                            Don't have an account? <a href="# " onclick="location.href='http://localhost:3004/register' " class="text-muted fw-bold link-danger ">Sign up</a>
+                        </p>
+                        </div>
+
+                        <p id="message "></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script/jquery-3.6.0.min.js "></script>
+    <script src="script/signin.js "></script>
+    <script>
+    </script>
+</body>
+
+</html>
